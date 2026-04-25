@@ -120,7 +120,7 @@ export default function QualityAssurance() {
             <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
               <img src={qualityImg2} alt="Quality Control Operations" className="w-full h-auto" />
               <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/70 via-transparent to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8">
+              <div className="absolute bottom-0 left-0 right-0 p-8 hidden lg:block">
                 <div className="bg-white/95 backdrop-blur-md rounded-xl p-6 shadow-xl border border-gray-100">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -133,6 +133,20 @@ export default function QualityAssurance() {
                       </p>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            {/* Mobile: Content below image */}
+            <div className="lg:hidden mt-4 bg-white rounded-xl shadow-lg border border-gray-100 p-4">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Award className="text-white" size={20} />
+                </div>
+                <div>
+                  <h4 className="font-bold text-secondary-900 text-base mb-2">ISO-Compliant Quality Management</h4>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Our quality management system follows international standards, ensuring every fabrication project meets stringent quality benchmarks and customer requirements.
+                  </p>
                 </div>
               </div>
             </div>
