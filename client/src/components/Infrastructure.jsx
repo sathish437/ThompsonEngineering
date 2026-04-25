@@ -22,14 +22,14 @@ export default function Infrastructure() {
         {/* Common Image Gallery - info1, info2, info3 */}
         <ScrollReveal variants={fadeUp} className="mb-12">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="rounded-xl overflow-hidden border border-secondary-700 shadow-lg">
-              <img src={info1Img} alt="Power Press Machines" className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" />
+            <div className="rounded-xl overflow-hidden border border-secondary-700 shadow-lg bg-secondary-800">
+              <img src={info1Img} alt="Power Press Machines" className="w-full max-h-40 sm:max-h-64 object-contain hover:scale-105 transition-transform duration-500" />
             </div>
-            <div className="rounded-xl overflow-hidden border border-secondary-700 shadow-lg">
-              <img src={info2Img} alt="Shearing Machines" className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" />
+            <div className="rounded-xl overflow-hidden border border-secondary-700 shadow-lg bg-secondary-800">
+              <img src={info2Img} alt="Shearing Machines" className="w-full max-h-40 sm:max-h-64 object-contain hover:scale-105 transition-transform duration-500" />
             </div>
-            <div className="rounded-xl overflow-hidden border border-secondary-700 shadow-lg">
-              <img src={info3Img} alt="Welding Units" className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" />
+            <div className="rounded-xl overflow-hidden border border-secondary-700 shadow-lg bg-secondary-800">
+              <img src={info3Img} alt="Welding Units" className="w-full max-h-40 sm:max-h-64 object-contain hover:scale-105 transition-transform duration-500" />
             </div>
           </div>
         </ScrollReveal>
