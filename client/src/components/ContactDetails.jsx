@@ -13,7 +13,7 @@ const contactItems = [
 export default function ContactDetails() {
   return (
     <section id="contact" className="py-16 sm:py-24 bg-secondary-900 text-white">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <SectionTitle tag="Reach Us">Contact Us</SectionTitle>
         <div className="grid md:grid-cols-2 gap-10 md:gap-12">
           <ScrollReveal variants={fadeLeft} className="space-y-6">

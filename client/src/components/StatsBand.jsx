@@ -6,8 +6,8 @@ import AnimatedCounter from './shared/AnimatedCounter';
 
 export default function StatsBand() {
   return (
-    <section className="bg-primary-700 py-10 sm:py-12">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+    <section className="bg-primary-700 py-12 sm:py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <StaggerReveal className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
           {stats.map((s) => (
             <motion.div key={s.label} variants={fadeUp} className="text-white py-2">

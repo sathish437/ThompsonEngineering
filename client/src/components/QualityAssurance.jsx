@@ -1,17 +1,35 @@
-import { Award, Users, Shield, CheckCircle } from 'lucide-react';
+import { Award, Users, Shield, CheckCircle, ClipboardCheck, Wrench, Eye, FileText, Truck, Settings } from 'lucide-react';
 import { qualityPoints, workforceItems, safetyItems } from '../data/constants';
-import { fadeRight, fadeLeft } from '../utils/animations';
+import { fadeRight, fadeLeft, fadeUp } from '../utils/animations';
 import qualityImg from '../assets/1000109950.jpg';
+import qualityImg2 from '../assets/Quality.jpg';
 import SectionTitle from './shared/SectionTitle';
 import ScrollReveal from './shared/ScrollReveal';
 import StaggerReveal from './shared/StaggerReveal';
 import { motion } from 'framer-motion';
 
 export default function QualityAssurance() {
+  const inspectionSteps = [
+    { icon: Wrench, title: 'Raw Material Inspection', desc: 'Comprehensive material testing and verification before production begins' },
+    { icon: Settings, title: 'Process Monitoring', desc: 'Real-time quality checks at every fabrication stage' },
+    { icon: Eye, title: 'Dimensional Verification', desc: 'Precision measurement using calibrated instruments' },
+    { icon: FileText, title: 'Final Inspection', desc: 'Thorough examination against technical specifications' },
+    { icon: Truck, title: 'Pre-Dispatch Audit', desc: 'Final quality assurance before shipment to client' },
+  ];
+
   return (
-    <section id="quality" className="py-20 sm:py-28 bg-gradient-to-b from-secondary-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section id="quality" className="py-16 sm:py-24 bg-gradient-to-b from-secondary-50 to-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <SectionTitle tag="Standards">Quality Assurance</SectionTitle>
+
+        {/* Quality Commitment Intro */}
+        <ScrollReveal className="mb-12">
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+            <p className="text-gray-700 text-lg leading-relaxed text-center max-w-4xl mx-auto">
+              At Thompson Engineering, quality is not just a process—it's our commitment to excellence. Every component that leaves our facility undergoes rigorous inspection protocols, ensuring precision engineering meets the highest industry standards. Our systematic approach to quality control guarantees consistent performance, reliability, and customer satisfaction across all fabrication projects.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Main Command Center Layout */}
         <div className="grid lg:grid-cols-12 gap-8 mb-12">
@@ -63,6 +81,63 @@ export default function QualityAssurance() {
             </div>
           </ScrollReveal>
         </div>
+
+        {/* Quality Inspection Workflow - Unique Concept */}
+        <ScrollReveal variants={fadeUp} className="mb-12">
+          <div className="bg-secondary-900 rounded-2xl shadow-2xl p-8 border border-secondary-700">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center">
+                <ClipboardCheck className="text-white" size={24} />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white">Quality Inspection Workflow</h3>
+                <p className="text-gray-400 text-sm">Our systematic 5-stage quality control process</p>
+              </div>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {inspectionSteps.map((step, index) => {
+                const IconComponent = step.icon;
+                return (
+                  <motion.div key={step.title} variants={fadeRight}
+                    className="bg-secondary-800 rounded-xl p-5 border border-secondary-700 hover:border-primary-500 transition-colors group">
+                    <div className="w-10 h-10 bg-primary-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-500 transition-colors">
+                      <IconComponent className="text-primary-400 group-hover:text-white transition-colors" size={20} />
+                    </div>
+                    <div className="text-xs text-primary-400 font-semibold mb-2">STEP {index + 1}</div>
+                    <h4 className="font-bold text-white mb-2">{step.title}</h4>
+                    <p className="text-gray-400 text-xs leading-relaxed">{step.desc}</p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Second Quality Image with Premium Presentation */}
+        <ScrollReveal variants={fadeLeft} className="mb-12">
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-br from-primary-600/10 to-secondary-600/5 rounded-3xl blur-2xl"></div>
+            <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+              <img src={qualityImg2} alt="Quality Control Operations" className="w-full h-auto" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/70 via-transparent to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="bg-white/95 backdrop-blur-md rounded-xl p-6 shadow-xl border border-gray-100">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Award className="text-white" size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-secondary-900 text-lg mb-2">ISO-Compliant Quality Management</h4>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        Our quality management system follows international standards, ensuring every fabrication project meets stringent quality benchmarks and customer requirements.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
 
         {/* Workforce & Safety Trust Cards */}
         <div className="grid md:grid-cols-2 gap-8">

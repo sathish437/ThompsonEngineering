@@ -6,7 +6,7 @@ import { fadeLeft, fadeRight } from '../utils/animations';
 
 export default function CompanyOverview() {
   return (
-    <section id="overview" className="py-6 sm:py-10 bg-white">
+    <section id="overview" className="py-16 sm:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-2 gap-4 md:gap-6 items-center">
           <div className="order-2 md:order-1">
