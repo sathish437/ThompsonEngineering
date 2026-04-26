@@ -36,6 +36,7 @@ export default function Hero() {
             className="cursor-pointer min-w-0 flex items-center gap-3"
             onClick={() => scrollTo('hero')}
           >
+            <img src={logoImg} alt="Thompson Engineering" className="h-10 sm:h-12 w-auto rounded-full opacity-80" />
             <div className="flex gap-2 justify-center items-center">
               <span className="text-white text-base sm:text-lg font-black tracking-tight leading-tight">THOMPSON</span>
               <span className="text-blue-200 text-xs sm:text-sm font-bold tracking-wide">ENGINEERING</span>
@@ -103,10 +104,6 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto w-full">
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}>
-          <img src={logoImg} alt="Thompson Engineering" className="h-20 sm:h-24 w-auto mx-auto mb-6 object-contain" />
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
